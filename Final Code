@@ -5,7 +5,7 @@ Light Show
 Summary
 Will be building a sensored LED light that is controlled by sound. So when someone claps, the light will react to that sound. 
 
-Include a discussion of how it will be interactive or responsive to the environment.
+Any sound that is detected through a sensor and react 
 
 Component Parts
 Describe the components, or pieces, that make up your project.
@@ -14,7 +14,7 @@ Include what types of inputs/outputs/data it will use. You can also upload an im
 
 When your project is completed, you will then add the following sections:
 
-Timeline
+Timeline 
 Week 0: Write Proposal
 Week 1: Prototype
 Week 2: Prototype
@@ -22,13 +22,37 @@ Week 3: Refine/Re-adjust
 Week 4: Present!
 
 Challenges
-A brief discussion of what was hard, challenging, or unexpected about your project.
-  Figuring out how to make it look presentable and 
+  Figuring out how to make it look presentable and figuring out how to connect multiple lights together and have a delay.
 
 Completed Work
-Upload photos and videos of your completed final project!
+** (Upload photos and videos of your completed final project!) **
 
-Also upload the code that makes up your project to your repository.
+Code 
+    int soundsensor = 3;
+    int led = 7;
+
+    void setup() {
+
+        pinMode (soundsensor, INPUT);
+        pinMode (led, OUTPUT);
+
+    }
+
+    void loop() {
+
+        int sensorvalue = digitalRead (soundsensor);
+  
+        if (sensorvalue == 1)
+        {
+        digitalWrite (led, HIGH);
+     }
+
+    else
+        {
+        digitalWrite (led, LOW);
+      }
+    }
+
 
 References and links
 Tutorials, comments, videos, magazine articles - anything you found that helps you understand your project.
