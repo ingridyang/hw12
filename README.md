@@ -1,1 +1,3 @@
-# hw12
+Final Project:
+
+  Light Sensor
